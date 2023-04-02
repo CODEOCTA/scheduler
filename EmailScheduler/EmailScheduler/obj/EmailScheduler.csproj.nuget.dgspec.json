@@ -1,0 +1,72 @@
+{
+  "format": 1,
+  "restore": {
+    "P:\\P\\GitHub\\Scheduler_Console_App\\EmailScheduler\\EmailScheduler\\EmailScheduler.csproj": {}
+  },
+  "projects": {
+    "P:\\P\\GitHub\\Scheduler_Console_App\\EmailScheduler\\EmailScheduler\\EmailScheduler.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "P:\\P\\GitHub\\Scheduler_Console_App\\EmailScheduler\\EmailScheduler\\EmailScheduler.csproj",
+        "projectName": "EmailScheduler",
+        "projectPath": "P:\\P\\GitHub\\Scheduler_Console_App\\EmailScheduler\\EmailScheduler\\EmailScheduler.csproj",
+        "packagesPath": "C:\\Users\\prana\\.nuget\\packages\\",
+        "outputPath": "P:\\P\\GitHub\\Scheduler_Console_App\\EmailScheduler\\EmailScheduler\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\prana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
