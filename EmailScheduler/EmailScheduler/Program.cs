@@ -7,6 +7,16 @@ using System.Data;
 using Microsoft.Data.SqlClient;
 using System.Configuration;
 
+
+
+
+using System.Net;
+using System.Net.Mail;
+
+
+using System.Data;
+using System.IO;
+
 namespace EmailScheduler
 {
     class Program
@@ -25,7 +35,9 @@ namespace EmailScheduler
             }
 
 
-            pm.Test();
+            //pm.Test();
+
+            pm.bttn_Send_Click();
             Console.ReadLine();
         }
 
@@ -53,6 +65,33 @@ namespace EmailScheduler
                 sqlCon.Close();
 
 
+            }
+        }
+
+
+        public void bttn_Send_Click()
+        {
+
+            using (MailMessage mail = new MailMessage())
+            {
+                mail.From = new MailAddress("noreplyehstesting78@gmail.com.com");
+                mail.To.Add("devpranayc@outlook.com");
+                mail.Subject = "Hello World";
+                mail.Body = "<h1>Hello</h1>";
+                mail.IsBodyHtml = true;
+                
+                string filePath = "P:\\downloads\\1653625128_traineesforaonla.pdf";
+      
+                string fileName = Path.GetFileName(filePath);
+                byte[] bytes = File.ReadAllBytes(filePath);
+                mail.Attachments.Add(new Attachment(new MemoryStream(bytes), fileName));
+              
+                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                {
+                    smtp.Credentials = new NetworkCredential("noreplyehstesting78@gmail.com", "cntpraqgsaqjlxpi");
+                    smtp.EnableSsl = true;
+                    smtp.Send(mail);
+                }
             }
         }
     }
